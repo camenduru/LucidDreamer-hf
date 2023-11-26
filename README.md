@@ -1,8 +1,21 @@
+---
+title: LucidDreamer
+emoji: 👁
+colorFrom: pink
+colorTo: yellow
+sdk: gradio
+sdk_version: 4.7.1
+app_file: gradio_demo.py
+pinned: false
+license: mit
+---
+
+
 # LucidDreamer: Towards High-Fidelity Text-to-3D Generation via Interval Score Matching
 
-[Yixun Liang](https://yixunliang.github.io/)$^{\color{red}{\*}}$ [Xin Yang](https://abnervictor.github.io/2023/06/12/Academic-Self-Intro.html)$^{\color{red}{\*}}$, [Jiantao Lin](https://ltt-o.github.io/), [Haodong Li](https://haodong-li.com/), [Xiaogang Xu](https://xiaogang00.github.io), [Yingcong Chen](https://www.yingcong.me)$^{\**}$
+[Yixun Liang](https://yixunliang.github.io/)\* [Xin Yang](https://abnervictor.github.io/2023/06/12/Academic-Self-Intro.html)\*, [Jiantao Lin](https://ltt-o.github.io/), [Haodong Li](https://haodong-li.com/), [Xiaogang Xu](https://xiaogang00.github.io), [Yingcong Chen](https://www.yingcong.me)\**
 
-$\color{red}{\*}$: Equal contribution.
+\*: Equal contribution.
 \**: Corresponding author.
 
 [Paper PDF (Arxiv)](https://arxiv.org/abs/2311.11284) | [Project Page (Coming Soon)]()
