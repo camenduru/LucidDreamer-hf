@@ -27,3 +27,6 @@ dependencies:
     - wandb
     - accelerate
     - triton
+    - submodules/diff-gaussian-rasterization/
+    - submodules/simple-knn/
+    - git+https://github.com/openai/point-e.git
