@@ -1,0 +1,1 @@
+python train.py --opt 'configs/bagel.yaml' --cuda 4
