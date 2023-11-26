@@ -38,3 +38,7 @@ example/Donut.mp4 filter=lfs diff=lfs merge=lfs -text
 example/durian.mp4 filter=lfs diff=lfs merge=lfs -text
 example/pillow_huskies.mp4 filter=lfs diff=lfs merge=lfs -text
 example/wooden_car.mp4 filter=lfs diff=lfs merge=lfs -text
+resources/applications.jpg filter=lfs diff=lfs merge=lfs -text
+resources/gif/demo-1.gif filter=lfs diff=lfs merge=lfs -text
+resources/gif/demo-2.gif filter=lfs diff=lfs merge=lfs -text
+resources/teaser.jpg filter=lfs diff=lfs merge=lfs -text
