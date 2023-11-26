@@ -47,7 +47,8 @@ def main(prompt, init_prompt, negative_prompt, num_iter, CFG, seed):
 
 with gr.Blocks() as demo:
     gr.Markdown("# <center>LucidDreamer: Towards High-Fidelity Text-to-3D Generation via Interval Score Matching</center>")
-    gr.Markdown("<center>This Gradio space is developed by &copy; Haodong Li.</center>")
+    gr.Markdown("<center>Yixun Liang*, Xin Yang*, Jiantao Lin, Haodong Li, Xiaogang Xu, Yingcong Chen** (*: Equal contribution; **: Corresponding author)</center>")
+    gr.Markdown("<center>This Gradio space is developed by Haodong Li</center>")
     gr.Interface(fn=main, inputs=[gr.Textbox(lines=2, value="A portrait of IRONMAN, white hair, head, photorealistic, 8K, HDR.", label="Your prompt"),
             gr.Textbox(lines=1, value="a man head.", label="Point-E init prompt (optional)"),
             gr.Textbox(lines=2, value="unrealistic, blurry, low quality, out of focus, ugly, low contrast, dull, low-resolution.", label="Negative prompt (optional)"),
