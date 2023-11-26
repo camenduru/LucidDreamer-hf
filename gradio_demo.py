@@ -55,5 +55,6 @@ with gr.Blocks() as demo:
             gr.Slider(7.5, 100, value=7.5, label="CFG"),
             gr.Number(value=0, label="Seed")], 
         outputs="playable_video",
-        examples=example_inputs)
+        examples=example_inputs,
+        cache_examples=True)
 demo.launch()
