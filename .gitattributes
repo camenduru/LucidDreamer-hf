@@ -42,3 +42,4 @@ resources/applications.jpg filter=lfs diff=lfs merge=lfs -text
 resources/gif/demo-1.gif filter=lfs diff=lfs merge=lfs -text
 resources/gif/demo-2.gif filter=lfs diff=lfs merge=lfs -text
 resources/teaser.jpg filter=lfs diff=lfs merge=lfs -text
+submodules/diff-gaussian-rasterization/third_party/glm/doc/manual.pdf filter=lfs diff=lfs merge=lfs -text
