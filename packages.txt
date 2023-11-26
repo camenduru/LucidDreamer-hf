@@ -1,4 +1,4 @@
 ninja-build
 build-essential
-gcc-11 -o=dir::cache=/usr/local/cuda/gcc
-g++-11 -o=dir::cache=/usr/local/cuda/g++
+gcc-11 -o=dir::cache=/usr/local/cuda/bin
+g++-11 -o=dir::cache=/usr/local/cuda/bin
