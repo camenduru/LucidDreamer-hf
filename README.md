@@ -9,6 +9,7 @@ python_version: 3.9
 app_file: gradio_demo.py
 pinned: false
 license: mit
+tags: [arXiv:2311.11284, Diffusion, 3D Generation, Gaussian Splatting]
 ---
 
 
