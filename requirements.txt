@@ -1,6 +1,4 @@
 xformers==0.0.16
 git+https://github.com/openai/point-e.git
-/home/user/app/submodules/simple-knn
-# git+https://github.com/YixunLiang/simple-knn
-/home/user/app/submodules/diff-gaussian-rasterization
-# git+https://github.com/YixunLiang/diff-gaussian-rasterization.git
+git+https://github.com/YixunLiang/simple-knn
+git+https://github.com/YixunLiang/diff-gaussian-rasterization.git
