@@ -55,6 +55,7 @@ def main(prompt, init_prompt, negative_prompt, num_iter, CFG, seed):
     op.iterations = num_iter
     gp.guidance_scale = CFG
     gp.noise_seed = int(seed)
+    print('==> User Prompt:', gp.text)
     if os.environ.get('QUEUE_1') != "True":
         os.environ['QUEUE_1'] = "True"
         lp.workspace = 'gradio_demo_1'
