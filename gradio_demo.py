@@ -2,19 +2,17 @@ import gradio as gr
 import numpy as np
 import os
 
-# if os.environ.get('SUBMODULES_INSTALLED') != "True":
-#     os.environ['SUBMODULES_INSTALLED'] = "True"
-#     # https://github.com/pytorch/extension-cpp/issues/71
-#     os.environ["TORCH_CUDA_ARCH_LIST"] = "3.5;5.0;6.0;6.1;7.0;7.5;8.0;8.6+PTX"
-#     print('==> TORCH_CUDA_ARCH_LIST =', os.environ.get('TORCH_CUDA_ARCH_LIST'))
-#     os.system("python -m pip install git+https://github.com/YixunLiang/simple-knn.git")
-#     print('==> simple-knn installed!')
-#     os.system("python -m pip install git+https://github.com/YixunLiang/diff-gaussian-rasterization.git")
-#     print('==> diff-gaussian-rasterization installed!')
-# else:
-#     print('==> simple-knn & diff-gaussian-rasterization already installed!')
-
-from train import *
+try:
+    from train import *
+    print('==> simple-knn & diff-gaussian-rasterization already installed!')
+except:
+    # https://github.com/pytorch/extension-cpp/issues/71
+    os.environ["TORCH_CUDA_ARCH_LIST"] = "3.5;5.0;6.0;6.1;7.0;7.5;8.0;8.6+PTX"
+    print('==> TORCH_CUDA_ARCH_LIST =', os.environ.get('TORCH_CUDA_ARCH_LIST'))
+    os.system("python -m pip install git+https://github.com/YixunLiang/simple-knn.git")
+    print('==> simple-knn installed!')
+    os.system("python -m pip install git+https://github.com/YixunLiang/diff-gaussian-rasterization.git")
+    print('==> diff-gaussian-rasterization installed!')    
 
 example_inputs = [[
         "A DSLR photo of a Rugged, vintage-inspired hiking boots with a weathered leather finish, best quality, 4K, HD.",
