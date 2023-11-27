@@ -73,5 +73,6 @@ with gr.Blocks() as demo:
             gr.Number(value=0, label="Seed")], 
         outputs="playable_video",
         examples=example_inputs,
-        cache_examples=True)
+        cache_examples=True,
+        concurrency_limit=2)
 demo.launch()
