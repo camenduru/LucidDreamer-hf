@@ -1,9 +1,6 @@
 import gradio as gr
 import numpy as np
-# from train import *
-
-import torch
-print(torch.cuda.is_available())
+from train import *
 
 example_inputs = [[
         "A DSLR photo of a Rugged, vintage-inspired hiking boots with a weathered leather finish, best quality, 4K, HD.",
