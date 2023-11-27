@@ -4,7 +4,7 @@ import os
 from train import *
 
 # https://github.com/pytorch/extension-cpp/issues/71
-if value = os.environ.get('TORCH_CUDA_ARCH_LIST') != "3.5;5.0;6.0;6.1;7.0;7.5;8.0;8.6+PTX":
+if os.environ.get('TORCH_CUDA_ARCH_LIST') != "3.5;5.0;6.0;6.1;7.0;7.5;8.0;8.6+PTX":
     os.environ["TORCH_CUDA_ARCH_LIST"] = "3.5;5.0;6.0;6.1;7.0;7.5;8.0;8.6+PTX"
     os.system("python -m pip install git+https://github.com/YixunLiang/simple-knn.git")
     os.system("python -m pip install git+https://github.com/YixunLiang/diff-gaussian-rasterization.git")
