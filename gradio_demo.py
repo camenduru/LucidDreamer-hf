@@ -55,8 +55,14 @@ def main(prompt, init_prompt, negative_prompt, num_iter, CFG, seed):
     op.iterations = num_iter
     gp.guidance_scale = CFG
     gp.noise_seed = int(seed)
-    lp.workspace = 'gradio_demo'
-    video_path = start_training(args, lp, op, pp, gcp, gp)
+    if os.environ.get('QUEUE_1') != "True":
+        os.environ['QUEUE_1'] = "True"
+        lp.workspace = 'gradio_demo_1'
+        video_path = start_training(args, lp, op, pp, gcp, gp)
+        os.environ['QUEUE_1'] = "False"
+    else:
+        lp.workspace = 'gradio_demo_2'
+        video_path = start_training(args, lp, op, pp, gcp, gp)
     return gr.Video(value=video_path, autoplay=True)
 
 with gr.Blocks() as demo:
