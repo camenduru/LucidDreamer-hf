@@ -83,7 +83,7 @@ with gr.Blocks() as demo:
     gr.Interface(fn=main, inputs=[gr.Textbox(lines=2, value="A portrait of IRONMAN, white hair, head, photorealistic, 8K, HDR.", label="Your prompt"),
             gr.Textbox(lines=1, value="a man head.", label="Point-E init prompt (optional)"),
             gr.Textbox(lines=2, value="unrealistic, blurry, low quality, out of focus, ugly, low contrast, dull, low-resolution.", label="Negative prompt (optional)"),
-            gr.Slider(1000, 5000, value=5000, label="Number of iterations"),
+            gr.Slider(1000, 5000, value=3000, label="Number of iterations"),
             gr.Slider(7.5, 100, value=7.5, label="CFG"),
             gr.Number(value=0, label="Seed")], 
         outputs=["playable_video", "playable_video"],
