@@ -1,8 +1,13 @@
 import gradio as gr
 import numpy as np
-# from train import *
-import torch
-print(torch.cuda.is_available())
+import os
+from train import *
+
+# https://github.com/pytorch/extension-cpp/issues/71
+if value = os.environ.get('TORCH_CUDA_ARCH_LIST') != "3.5;5.0;6.0;6.1;7.0;7.5;8.0;8.6+PTX":
+    os.environ["TORCH_CUDA_ARCH_LIST"] = "3.5;5.0;6.0;6.1;7.0;7.5;8.0;8.6+PTX"
+    os.system("python -m pip install git+https://github.com/YixunLiang/simple-knn.git")
+    os.system("python -m pip install git+https://github.com/YixunLiang/diff-gaussian-rasterization.git")
 
 example_inputs = [[
         "A DSLR photo of a Rugged, vintage-inspired hiking boots with a weathered leather finish, best quality, 4K, HD.",
