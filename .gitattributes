@@ -42,3 +42,8 @@ resources/applications.jpg filter=lfs diff=lfs merge=lfs -text
 resources/gif/demo-1.gif filter=lfs diff=lfs merge=lfs -text
 resources/gif/demo-2.gif filter=lfs diff=lfs merge=lfs -text
 resources/teaser.jpg filter=lfs diff=lfs merge=lfs -text
+example/boots_pro.mp4 filter=lfs diff=lfs merge=lfs -text
+example/Donut_pro.mp4 filter=lfs diff=lfs merge=lfs -text
+example/durian_pro.mp4 filter=lfs diff=lfs merge=lfs -text
+example/pillow_huskies_pro.mp4 filter=lfs diff=lfs merge=lfs -text
+example/wooden_car_pro.mp4 filter=lfs diff=lfs merge=lfs -text
