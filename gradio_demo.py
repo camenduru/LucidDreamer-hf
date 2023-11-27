@@ -78,7 +78,7 @@ with gr.Blocks() as demo:
     gr.Markdown("# <center>LucidDreamer: Towards High-Fidelity Text-to-3D Generation via Interval Score Matching</center>")
     gr.Markdown("This live demo allows you to generate high-quality 3D content using text prompts. The outputs are 360° rendered 3d gaussian video and training progress visualization.<br> \
                 It is based on Stable Diffusion 2.1. Please check out our <strong><a href=https://github.com/EnVision-Research/LucidDreamer>Project Page</a> / <a href=https://arxiv.org/abs/2311.11284>Paper</a> / <a href=https://github.com/EnVision-Research/LucidDreamer>Code</a></strong> if you want to learn more about our method!<br> \
-                Note that this demo is running on A10G Small, the running time might be longer than the reported 35 minutes (5000 iterations) on A100.<br> \
+                Note that this demo is running on A10G, the running time might be longer than the reported 35 minutes (5000 iterations) on A100.<br> \
                 &copy; This Gradio space was developed by Haodong LI.")
     gr.Interface(fn=main, inputs=[gr.Textbox(lines=2, value="A portrait of IRONMAN, white hair, head, photorealistic, 8K, HDR.", label="Your prompt"),
             gr.Textbox(lines=1, value="a man head.", label="Point-E init prompt (optional)"),
