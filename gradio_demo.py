@@ -65,11 +65,13 @@ def main(prompt, init_prompt, negative_prompt, num_iter, CFG, seed):
     gp.noise_seed = int(seed)
     print('==> User Prompt:', gp.text)
     if os.environ.get('QUEUE_1') != "True":
+        os.environ["CUDA_VISIBLE_DEVICES"] = "0"
         os.environ['QUEUE_1'] = "True"
         lp.workspace = 'gradio_demo_1'
         video_path, pro_video_path = start_training(args, lp, op, pp, gcp, gp)
         os.environ['QUEUE_1'] = "False"
     else:
+        os.environ["CUDA_VISIBLE_DEVICES"] = "1"
         lp.workspace = 'gradio_demo_2'
         video_path, pro_video_path = start_training(args, lp, op, pp, gcp, gp)
     return gr.Video(value=video_path, autoplay=True), gr.Video(value=pro_video_path, autoplay=True)
