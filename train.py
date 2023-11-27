@@ -382,7 +382,7 @@ def training(dataset, opt, pipe, gcams, guidance_opt, testing_iterations, saving
 
     if opt.save_process:
         imageio.mimwrite(os.path.join(save_folder_proc, "video_rgb.mp4"), pro_img_frames, fps=30, quality=8)
-    return video_path
+    return video_path, os.path.join(save_folder_proc, "video_rgb.mp4")
 
 
 def prepare_output_and_logger(args):    
@@ -543,10 +543,10 @@ def start_training(args, lp, op, pp, gcp, gp):
     # Start GUI server, configure and run training
     network_gui.init(args.ip, args.port)
     torch.autograd.set_detect_anomaly(args.detect_anomaly)
-    video_path = training(lp, op, pp, gcp, gp, args.test_iterations, args.save_iterations, args.checkpoint_iterations, args.start_checkpoint, args.debug_from, args.save_video)
+    video_path, pro_video_path = training(lp, op, pp, gcp, gp, args.test_iterations, args.save_iterations, args.checkpoint_iterations, args.start_checkpoint, args.debug_from, args.save_video)
     # All done
     print("\nTraining complete.")
-    return video_path
+    return video_path, pro_video_path
 
 if __name__ == "__main__":
     args, lp, op, pp, gcp, gp = args_parser()
