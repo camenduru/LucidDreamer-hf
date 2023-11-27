@@ -503,7 +503,7 @@ def args_parser(default_opt=None):
 
     args = parser.parse_args(sys.argv[1:])
 
-    # os.environ["CUDA_VISIBLE_DEVICES"] = args.cuda
+    os.environ["CUDA_VISIBLE_DEVICES"] = args.cuda
     if args.opt is not None:
         with open(args.opt) as f:
             opts = yaml.load(f, Loader=yaml.FullLoader)
